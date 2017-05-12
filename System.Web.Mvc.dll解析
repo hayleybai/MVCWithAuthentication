@@ -3,76 +3,43 @@
 Filter 是asp.net
 mvc 框架提供的基于AOP
 的设计。
+Filter 是asp.net
+mvc 框架提供的基于AOP
+的设计。
 
 提供在action
 执行前后做一些非业务逻辑通用处理。 如用户验证，缓存。
 
 Assembly location: D:\code\cg\trunk\server\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll
+提供在action
+执行前后做一些非业务逻辑通用处理。 如用户验证，缓存。
 
+Assembly location: D:\code\cg\trunk\server\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll
  
 /// <summary>Represents a metadata
 class that contains a reference to the implementation of one or more of the
-filter interfaces, the filter's order, and the filter's scope.</summary>
-
- 
-public class Filter
-
- 
+filter interfaces, the filter's order, and the filter's scope.</summary> 
+public class Filter 
 {
-
 /// <summary>表示一个用于指定筛选器的默认顺序的常数。</summary>
-
     public const int DefaultOrder = -1;
-
 /// <summary>筛选器的实例
-
-///<see
-cref="T:System.Web.Mvc.Filter" />筛选器的实例</summary>
-
-   
-/// <param name="instance">The instance.</param>
-
-   
-/// <param name="scope">The scope.</param>
-
-   
-/// <param name="order">The order.</param>
-
-   
-public Filter(object instance, FilterScope
-scope, int? order);
-
-   
-/// <summary>Gets the instance of
-this class.</summary>
-
-  
+///<see cref="T:System.Web.Mvc.Filter" />筛选器的实例</summary>   
+/// <param name="instance">The instance.</param>   
+/// <param name="scope">The scope.</param>   
+/// <param name="order">The order.</param>   
+public Filter(object instance, FilterScope scope, int? order);   
+/// <summary>Gets the instance of this class.</summary>  
  /// <returns>The instance of this class.</returns>
-
-   
 public object Instance { get; protected set; }
-
-   
 /// <summary>Gets the order in
 which the filter is applied.</summary>
-
-   
 /// <returns>The order in which the
-filter is applied.</returns>
-
-   
-public int Order { get; protected set; }
-
-   
+filter is applied.</returns> 
+public int Order { get; protected set; }  
 /// <summary>Gets the scope
-ordering of the filter.</summary>
-
-   
-/// <returns>The scope ordering of
-the filter.</returns>
-
-   
+ordering of the filter.</summary>   
+/// <returns>The scope ordering of the filter.</returns>
 public FilterScope Scope { get; protected set; }
-
   }
 
